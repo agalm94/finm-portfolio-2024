@@ -99,9 +99,9 @@ def calc_cummulative_returns(
                 raise Exception(f'No returns for {name} timeframe')
             calc_cummulative_returns(
                 timeframe_returns,
-                return_plot=True,
+                return_plot=return_plot,
                 fig_size=fig_size,
-                return_series=False,
+                return_series=return_series,
                 name=name,
                 timeframes=None
             )
@@ -731,7 +731,7 @@ def calc_correlations(
 
 def calc_tangency_weights(
     returns: pd.DataFrame,
-    cov_mat: str = 1,
+    cov_mat: float = 1.,
     return_graphic: bool = False,
     return_port_ret: bool = False,
     target_ret_rescale_weights: Union[None, float] = None,
