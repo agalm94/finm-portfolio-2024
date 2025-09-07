@@ -620,7 +620,6 @@ def calc_cross_section_regression(
     )
 
 
-
 def get_best_and_worst(
     summary_statistics: pd.DataFrame,
     stat: str = 'Annualized Sharpe',
